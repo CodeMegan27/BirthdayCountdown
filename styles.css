@@ -5,6 +5,7 @@
     font-style: normal;
 }
 
+/* Default styles (for larger screens) */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -17,7 +18,8 @@ body {
 
 .container {
     width: 700px;
-    height: 350px;
+    max-width: 90%;
+    height: auto;
     text-align: center;
     background: #fff;
     padding: 20px;
@@ -35,6 +37,7 @@ h1 {
 
 #countdown {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     font-family: "New Amsterdam", sans-serif;
@@ -56,4 +59,53 @@ h1 {
     font-size: 25px;
     margin-top: 5px;
     font-weight: bold;
+}
+
+/* Mobile styles (for smaller screens) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto; /* Adjust height to be automatic */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    #countdown {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time {
+        padding: 15px;
+    }
+
+    .time div {
+        font-size: 36px;
+    }
+
+    .label {
+        font-size: 20px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .time {
+        padding: 10px;
+    }
+
+    .time div {
+        font-size: 28px;
+    }
+
+    .label {
+        font-size: 18px;
+    }
 }
