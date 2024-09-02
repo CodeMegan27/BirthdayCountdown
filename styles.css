@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'HappyBirthday_Demo';
+    src: url('HappyBirthday_Demo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 700px;
+    height: 350px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, black, blue);
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: "Sevillana", cursive;
+    color: white;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: "New Amsterdam", sans-serif;
+}
+
+.time {
+    text-align: center;
+    background: #ffd700; /* Gold background */
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.time div {
+    font-size: 48px;
+}
+
+.label {
+    font-size: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
