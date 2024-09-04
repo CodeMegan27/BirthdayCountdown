@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'HappyBirthday_Demo';
-    src: url('HappyBirthday_Demo.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
-/* Default styles (for larger screens) */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -19,13 +12,13 @@ body {
 .container {
     width: 700px;
     max-width: 90%;
-    height: auto;
     text-align: center;
-    background: #fff;
+    background: linear-gradient(45deg, black, blue);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, black, blue);
+    position: relative;
+    overflow: visible; /* Ensure balloons are visible outside the container */
 }
 
 h1 {
@@ -48,7 +41,6 @@ h1 {
     background: #ffd700; /* Gold background */
     padding: 20px;
     border-radius: 8px;
-    position: relative;
 }
 
 .time div {
@@ -61,11 +53,123 @@ h1 {
     font-weight: bold;
 }
 
+.balloon {
+    width: 90px;
+    position: absolute;
+    top: 0;
+    animation: float 4s ease-in-out infinite;
+}
+
+.balloon-left {
+    left: -15px;
+}
+
+.balloon-right {
+    right: -15px;
+}
+
+.party-hat{
+    width: 70px;
+    position: absolute;
+    top: -25px;
+    left: 165px;
+    transform: rotate(341deg);
+}
+
+.common{
+    width: 50px;
+    position: absolute;
+}
+
+.party-rope{
+    width: 120px;
+}
+
+.left{
+    top: 16px;
+    left: 6px;
+    transform: rotate(336deg);
+}
+
+.right{
+    top: 16px;
+    right: 6px;
+    transform: rotate(26deg);
+}
+
+.flame {
+    width: 30px;
+    top: 15px;
+    position: absolute;
+    animation: flicker 2s infinite ease-in-out;
+    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
+}
+
+.one {
+    left: 282px;
+}
+
+.two{
+    right: 243px;
+}
+
+.three{
+    right: 184px;
+}
+
+.cap-left {
+    left: -6px;
+    bottom: -15px;
+    transform: rotate(21deg);
+    width: 70px;
+}
+
+.cap-right{
+    right: -11px;
+    bottom: -9px;
+    width: 70px;
+    transform: rotate(287deg);
+}
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes flicker {
+    0% {
+        filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.8));
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        filter: drop-shadow(0 0 30px rgba(255, 140, 0, 1));
+        transform: scale(1.1) translateY(-5px);
+    }
+    100% {
+        filter: drop-shadow(0 0 15px rgba(255, 165, 0, 0.8));
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+
+/* Responsive Design */
+
 /* Mobile styles (for smaller screens) */
 @media (max-width: 768px) {
     .container {
         width: 90%;
-        height: auto; /* Adjust height to be automatic */
         padding: 15px;
     }
 
@@ -76,6 +180,10 @@ h1 {
     #countdown {
         flex-direction: column;
         gap: 10px;
+        flex-direction: column;
+        gap: 10px;
+        /* justify-content: center; */
+        align-items: center;
     }
 
     .time {
@@ -89,6 +197,24 @@ h1 {
     .label {
         font-size: 20px;
     }
+
+    .balloon {
+        width: 70px; /* Adjusted size for smaller screens */
+    }
+
+    .balloon-left {
+        left: -40px; /* Adjusts the left balloon position */
+    }
+
+    .balloon-right {
+        right: -40px; /* Adjusts the right balloon position */
+    }
+
+    .party-hat{
+        width: 12%;
+        left: 82px;
+    }
+    
 }
 
 /* Extra small screens */
@@ -99,6 +225,7 @@ h1 {
 
     .time {
         padding: 10px;
+        width: 30%;
     }
 
     .time div {
@@ -107,5 +234,47 @@ h1 {
 
     .label {
         font-size: 18px;
+    }
+
+    .balloon {
+        width: 50px; /* Further adjusted size for extra small screens */
+    }
+
+    .balloon-left {
+        left: -10px; /* Further adjusts the left balloon position */
+    }
+
+    .balloon-right {
+        right: -10px; /* Further adjusts the right balloon position */
+    }
+
+    .party-hat{
+        width: 9%;
+        left: 85px;
+        top: -6px;
+    }
+
+    .left {
+        width: 22%;
+    }
+
+    .right {
+        width: 22%;
+    }
+
+    .flame{
+        width: 15px;
+    }
+
+    .one{
+        left: 151px;
+    }
+
+    .two{
+        right: 128px;
+    }
+
+    .three{
+        right: 93px;
     }
 }
