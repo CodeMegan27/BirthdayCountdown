@@ -117,6 +117,20 @@ h1 {
     right: 184px;
 }
 
+.cap-left {
+    left: -6px;
+    bottom: -15px;
+    transform: rotate(21deg);
+    width: 70px;
+}
+
+.cap-right{
+    right: -11px;
+    bottom: -9px;
+    width: 70px;
+    transform: rotate(287deg);
+}
+
 
 
 
