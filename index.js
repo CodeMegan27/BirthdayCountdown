@@ -38,7 +38,7 @@ function updateCountdown() {
     const timeDifference = endDate - now;
 
     if (timeDifference <= 0) {
-        // If the countdown has ended, display the birthday message
+        console.log("Countdown has ended. Starting confetti...");
         document.getElementById('countdown').innerHTML = "<h1>Let the party begin. Happy birthday, to my one true love! 🖤!</h1>";
         document.getElementById('title').style.display = "none";
         document.getElementById('rmv').style.display = "none";
@@ -46,9 +46,8 @@ function updateCountdown() {
         document.getElementById('rmv3').style.display = "none";
         document.getElementById('rmv4').style.display = "none";
         
-        // Start confetti when countdown ends
         startConfetti();
-        setInterval(startConfetti(), 5000); // Burst confetti every 5 seconds
+        setInterval(startConfetti, 5000); // Burst confetti every 5 seconds
         return; // Exit the function
     }
 
@@ -63,6 +62,5 @@ function updateCountdown() {
     document.getElementById('seconds').textContent = seconds;
 }
 
-// Call the function initially to display the countdown immediately
-updateCountdown();
-setInterval(updateCountdown, 1000);
+updateCountdown()
+startConfetti()
