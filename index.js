@@ -63,4 +63,5 @@ function updateCountdown() {
 }
 
 updateCountdown()
+setInterval(updateCountdown, 1000);
 startConfetti()
