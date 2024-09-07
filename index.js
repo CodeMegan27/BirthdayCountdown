@@ -33,21 +33,21 @@ function startConfetti() {
 }
 
 function updateCountdown() {
-    const endDate = new Date('2024-09-09T00:00:00'); // Replace with your desired date and time
+    const endDate = new Date('2024-09-07T00:00:00'); // Replace with your desired date and time
     const now = new Date();
     const timeDifference = endDate - now;
 
     if (timeDifference <= 0) {
         console.log("Countdown has ended. Starting confetti...");
-        document.getElementById('countdown').innerHTML = "<h1>Let the party begin. Happy birthday, to my one true love! 🖤!</h1>";
+        document.getElementById('countdown').innerHTML = "<h1>Happy Birthday Usha rani 💙🖤!</h1>";
         document.getElementById('title').style.display = "none";
         document.getElementById('rmv').style.display = "none";
         document.getElementById('rmv2').style.display = "none";
         document.getElementById('rmv3').style.display = "none";
         document.getElementById('rmv4').style.display = "none";
         
-        startConfetti();
-        setInterval(startConfetti, 5000); // Burst confetti every 5 seconds
+        // startConfetti();
+        // setInterval(startConfetti, 5000); // Burst confetti every 5 seconds
         return; // Exit the function
     }
 
@@ -63,5 +63,6 @@ function updateCountdown() {
 }
 
 updateCountdown()
+setInterval(startConfetti, 5000); // Burst confetti every 5 seconds
 setInterval(updateCountdown, 1000);
 startConfetti()
