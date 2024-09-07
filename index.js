@@ -63,6 +63,6 @@ function updateCountdown() {
 }
 
 updateCountdown()
-setInterval(startConfetti, 5000); // Burst confetti every 5 seconds
+setInterval(startConfetti, 7000); // Burst confetti every 5 seconds
 setInterval(updateCountdown, 1000);
 startConfetti()
