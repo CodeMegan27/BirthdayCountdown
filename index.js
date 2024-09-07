@@ -33,7 +33,7 @@ function startConfetti() {
 }
 
 function updateCountdown() {
-    const endDate = new Date('2024-09-07T00:00:00'); // Replace with your desired date and time
+    const endDate = new Date('2024-09-09T00:00:00'); // Replace with your desired date and time
     const now = new Date();
     const timeDifference = endDate - now;
 
