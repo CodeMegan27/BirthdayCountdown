@@ -33,7 +33,7 @@ function startConfetti() {
 }
 
 function updateCountdown() {
-    const endDate = new Date('2024-09-09T00:00:00'); // Replace with your desired date and time
+    const endDate = new Date('2025-09-09T00:00:00'); // Replace with your desired date and time
     const now = new Date();
     const timeDifference = endDate - now;
 
@@ -63,6 +63,6 @@ function updateCountdown() {
 }
 
 updateCountdown()
-setInterval(startConfetti, 7000); // Burst confetti every 5 seconds
+// setInterval(startConfetti, 7000); // Burst confetti every 5 seconds
 setInterval(updateCountdown, 1000);
-startConfetti()
+// startConfetti()

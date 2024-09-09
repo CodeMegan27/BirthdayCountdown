@@ -11,6 +11,7 @@ body {
 
 .container {
     width: 700px;
+    height: 45+0px;
     max-width: 90%;
     text-align: center;
     background: linear-gradient(45deg, black, blue);
@@ -26,6 +27,7 @@ h1 {
     margin-bottom: 20px;
     font-family: "Sevillana", cursive;
     color: white;
+    margin-left: 20px;
 }
 
 #countdown {
@@ -221,6 +223,7 @@ h1 {
 @media (max-width: 480px) {
     h1 {
         font-size: 28px;
+        margin-left: 20px;
     }
 
     .time {
