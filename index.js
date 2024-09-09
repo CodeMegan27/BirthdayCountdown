@@ -1,4 +1,4 @@
-function fire(ratio, opt){
+function fire(ratio, opt) {
     confetti(Object.assign({}, opt, {
         origin: {y: .6},
         particleCount: Math.floor(1000 * ratio)
@@ -33,36 +33,40 @@ function startConfetti() {
 }
 
 function updateCountdown() {
-    const endDate = new Date('2024-09-09T00:00:00'); // Replace with your desired date and time
+    const endDate = new Date('2024-09-09T00:00:00'); // Birthday at midnight
     const now = new Date();
     const timeDifference = endDate - now;
 
     if (timeDifference <= 0) {
-        console.log("Countdown has ended. Starting confetti...");
+        // Countdown has ended, display the birthday message
         document.getElementById('countdown').innerHTML = "<h1>Happy Birthday Usha rani 💙🖤!</h1>";
         document.getElementById('title').style.display = "none";
         document.getElementById('rmv').style.display = "none";
         document.getElementById('rmv2').style.display = "none";
         document.getElementById('rmv3').style.display = "none";
         document.getElementById('rmv4').style.display = "none";
-        
+
+        // Start the confetti every 5 seconds
         // startConfetti();
-        // setInterval(startConfetti, 5000); // Burst confetti every 5 seconds
+        // setInterval(startConfetti, 5000);
         return; // Exit the function
     }
 
+    // Countdown logic
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
+    // Update countdown display
     document.getElementById('days').textContent = days;
     document.getElementById('hours').textContent = hours;
     document.getElementById('minutes').textContent = minutes;
     document.getElementById('seconds').textContent = seconds;
 }
 
-updateCountdown()
-setInterval(startConfetti, 7000); // Burst confetti every 5 seconds
-setInterval(updateCountdown, 1000);
-startConfetti()
+// Initialize countdown and set intervals
+updateCountdown();
+setInterval(updateCountdown, 1000); // Update countdown every second
+setInterval(startConfetti, 7000);
+startConfetti();
